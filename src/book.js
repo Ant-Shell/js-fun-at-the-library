@@ -1,5 +1,5 @@
-function createTitle(bookIdea) {
-  return `The ${bookIdea}`;
+function createTitle(bookTitle) {
+  return `The ${bookTitle}`;
 }
 
 function buildMainCharacter(name, age, pronouns) {
@@ -15,13 +15,34 @@ function saveReview(userReview, reviews) {
   }
 };
 
+function calculatePageCount(bookPageCount) {
+  for (var i = 0; bookPageCount.length; i++)
+  return bookPageCount.length * 20;
+}
+
+
+
+function writeBook(bookTitle, bookCharacter, bookGenre) {
+ return {
+   title: createTitle(bookTitle).slice(4),
+   mainCharacter: bookCharacter,
+   pageCount: calculatePageCount(bookTitle),
+   genre: bookGenre
+ }
+};
+
+function editBook(title) {
+ title.pageCount = title.pageCount * .75
+ return title.pageCount;
+};
+
 module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
 
 
-  // calculatePageCount,
-  // writeBook,
-  // editBook
+  calculatePageCount,
+  writeBook,
+  editBook
 }
