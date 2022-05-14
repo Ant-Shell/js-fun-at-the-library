@@ -15,9 +15,13 @@ function saveReview(userReview, reviews) {
   }
 };
 
-function calculatePageCount(bookPageCount) {
-  for (var i = 0; bookPageCount.length; i++)
-  return bookPageCount.length * 20;
+// function calculatePageCount(bookPageCount) {
+//   for (var i = 0; bookPageCount.length; i++)
+//   return bookPageCount.length * 20;
+// }
+
+function calculatePageCount(createTitle) {
+  return createTitle.length * 20;
 }
 
 
