@@ -23,7 +23,7 @@ function listTitles(bookShelf) {
 function searchShelf(bookShelf, bookTitle) {
   for (var i = 0; i < bookShelf.length ; i++) {
     if (bookShelf[i].title === bookTitle) {
-      result = true;
+    result = true;
   } else {
     result = false;
   }
